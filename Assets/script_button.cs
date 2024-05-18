@@ -6,7 +6,7 @@ public class ClickCounter : MonoBehaviour
     public Image flameImage;
     public Text counterText;
     public Button upgradeButton;
-    private int clickCount = 0;
+    private long clickCount = 0;
     private int upgradeLevel = 0;
     private int clicksPerIncrement = 1;
     private int upgradeThreshold = 100;
@@ -46,7 +46,7 @@ public class ClickCounter : MonoBehaviour
     void OnUpgradeButtonClick()
     {
         upgradeLevel++;
-        clicksPerIncrement += 5;
+        clicksPerIncrement += 1000;
         clickCount -= upgradeThreshold;
         upgradeThreshold += 100;
         upgradeButton.gameObject.SetActive(false);
@@ -56,6 +56,6 @@ public class ClickCounter : MonoBehaviour
 
     void UpdateCounterText()
     {
-        counterText.text = "Score:\n" + clickCount.ToString();
+        counterText.text = clickCount.ToString() + " m";
     }
 }
