@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClickCounter : MonoBehaviour
+public class ClicksCounter : MonoBehaviour
 {
     public Button flameImage;
     public Text counterText;
