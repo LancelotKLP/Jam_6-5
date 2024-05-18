@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClicksCounter : MonoBehaviour
+public class ClickCounter : MonoBehaviour
 {
-    public Button flameImage;
+    public Image flameImage;
     public Text counterText;
     public Button upgradeButton;
     private int clickCount = 0;
