@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ClickCounter : MonoBehaviour
 {
-    public Image flameImage;
+    public Button flameImage;
     public Text counterText;
     public Button upgradeButton;
     private int clickCount = 0;
