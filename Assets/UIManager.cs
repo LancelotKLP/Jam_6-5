@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject mapScrollView; // Le Scroll View contenant la carte
-    public Button mapButton; // Le bouton pour ouvrir la carte
+    public GameObject mapScrollView;
+    public Button mapButton;
 
     void Start()
     {
-        mapButton.onClick.AddListener(ToggleMap); // Assigner la fonction au bouton
-        mapScrollView.SetActive(false); // Assurer que la carte est cachée au début
+        mapButton.onClick.AddListener(ToggleMap);
+        mapScrollView.SetActive(false);
     }
 
     void ToggleMap()
     {
-        mapScrollView.SetActive(!mapScrollView.activeSelf); // Afficher ou cacher la carte
+        mapScrollView.SetActive(!mapScrollView.activeSelf);
     }
 }

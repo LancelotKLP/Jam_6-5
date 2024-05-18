@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Transform[] checkpoints;  // Array des checkpoints
-    private int currentCheckpointIndex = 0;  // Index du checkpoint actuel
-    private Transform currentTarget;  // Checkpoint cible
-    public float speed = 2f;  // Vitesse de déplacement
+    public Transform[] checkpoints;
+    private int currentCheckpointIndex = 0;
+    private Transform currentTarget;
+    public float speed = 2f;
 
     [HideInInspector]
-    public float progress = 0f;  // Progression actuelle
-    public float progressSpeed = 0.1f;  // Vitesse de progression
+    public float progress = 0f;
+    public float progressSpeed = 0.1f;
 
     void Start()
     {
-        if (checkpoints.Length > 0)
-        {
+        if (checkpoints.Length > 0) {
             currentTarget = checkpoints[currentCheckpointIndex];
             transform.position = currentTarget.position;
         }
@@ -24,25 +23,19 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        if (currentTarget != null)
-        {
-            progress += progressSpeed * Time.deltaTime;  // Incrémentation de la progression
-            if (progress >= 1f)
-            {
+        if (currentTarget != null) {
+            progress += progressSpeed * Time.deltaTime;
+            if (progress >= 1f) {
                 progress = 0f;
                 MoveToNextCheckpoint();
-            }
-            else
-            {
+            } else
                 MoveAlongPath();
-            }
         }
     }
 
     void MoveAlongPath()
     {
-        if (currentCheckpointIndex < checkpoints.Length - 1)
-        {
+        if (currentCheckpointIndex < checkpoints.Length - 1) {
             Vector3 startPosition = checkpoints[currentCheckpointIndex].position;
             Vector3 endPosition = checkpoints[currentCheckpointIndex + 1].position;
             transform.position = Vector3.Lerp(startPosition, endPosition, progress);
@@ -51,11 +44,9 @@ public class CharacterMovement : MonoBehaviour
 
     void MoveToNextCheckpoint()
     {
-        if (currentCheckpointIndex < checkpoints.Length - 1)
-        {
+        if (currentCheckpointIndex < checkpoints.Length - 1) {
             currentCheckpointIndex++;
             currentTarget = checkpoints[currentCheckpointIndex];
         }
     }
 }
-

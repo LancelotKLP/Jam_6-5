@@ -37,12 +37,9 @@ public class ClickCounter : MonoBehaviour
     void CheckForUpgrade()
     {
         if (clickCount >= upgradeThreshold)
-        {
             upgradeButton.gameObject.SetActive(true);
-        }
     }
 
-    // Method to handle the upgrade button click
     void OnUpgradeButtonClick()
     {
         upgradeLevel++;

@@ -10,7 +10,6 @@ public class Test : MonoBehaviour
     {
         if (WorldTimeAPI.Instance.isTimeLoaded) {
             DateTime currentDateTime = WorldTimeAPI.Instance.GetCurrentDateTime();
-
             datetimeText.text = currentDateTime.ToString();
         }
     }

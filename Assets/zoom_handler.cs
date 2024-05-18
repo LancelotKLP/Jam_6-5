@@ -18,9 +18,7 @@ public class ZoomHandler : MonoBehaviour
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0.0f)
-        {
             Zoom(scroll);
-        }
     }
 
     void Zoom(float increment)

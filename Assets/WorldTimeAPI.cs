@@ -14,9 +14,8 @@ public class WorldTimeAPI : MonoBehaviour
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad (this.gameObject);
-        } else {
+        } else
             Destroy (this.gameObject);
-        }
     }
     #endregion
 
@@ -40,9 +39,9 @@ public class WorldTimeAPI : MonoBehaviour
         UnityWebRequest webRequest = UnityWebRequest.Get (API_URL);
         Debug.Log("getting real datetime...");
         yield return webRequest.SendWebRequest();
-        if (webRequest.error != null) {
+        if (webRequest.error != null)
             Debug.Log ("Error:" + webRequest.error);
-        } else {
+        else {
             TimeData timeData = JsonUtility.FromJson<TimeData> ( webRequest.downloadHandler.text );
 
             _currentDateTime = ParseDateTime ( timeData.datetime );

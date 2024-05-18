@@ -8,8 +8,7 @@ public class ClicksCounter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Détection des clics de souris gauche
-        {
+        if (Input.GetMouseButtonDown(0)) {
             clickCount++;
             counterText.text = clickCount.ToString();
         }
