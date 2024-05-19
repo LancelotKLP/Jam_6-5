@@ -3499,7 +3499,7 @@ MonoBehaviour:
   - {fileID: 1412331363}
   - {fileID: 106114081}
   scoreThresholds: 00000000c8000000900100002003000040060000800c000000190000003200000064000020cb0000
-  baseSpeed: 10
+  baseSpeed: 1
   scoreText: {fileID: 0}
   currentScore: 0
 --- !u!114 &1241108831
