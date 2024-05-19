@@ -7,7 +7,19 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 402ffb68c9d0073458c957e0bb6730f0
+  - enabled: 1
+    path: Assets/Scenes/Map - deplacement.unity
+    guid: aae29c6bed1827d47bfa7cf31f193c4b
+  - enabled: 1
+    path: Assets/Scenes/font.unity
+    guid: 732674f596eb34683ad0d18f22f328e7
+  - enabled: 1
+    path: Assets/Scenes/StreakChecker.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/StreakLost.unity
+    guid: c738508fd7c5c9740ac58e0db48b7ce6
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6ee40c5ab54f46547bb9fb0e18003497, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 59dff1f3635ed274f93d5715e77d043f, type: 2}

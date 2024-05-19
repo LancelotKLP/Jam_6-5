@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 31834123}
   - component: {fileID: 31834122}
   - component: {fileID: 31834121}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 142961545}
   - component: {fileID: 142961544}
   - component: {fileID: 142961543}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142961542}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &142961544
 Camera:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260707778}
   - component: {fileID: 260707779}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Checkpoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 266958219}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 539195785}
   - component: {fileID: 539195786}
   - component: {fileID: 539195787}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790854570}
   - component: {fileID: 790854569}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101693329}
   - component: {fileID: 1101693328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197661147}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358353703}
   - component: {fileID: 1358353704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Checkpoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 1389468737}
   - component: {fileID: 1389468739}
   - component: {fileID: 1389468738}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 1466790234}
   - component: {fileID: 1466790233}
   - component: {fileID: 1466790232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671937579}
   - component: {fileID: 1671937578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DALLE_2024-05-18_14.37.51_-_A_whimsical_map_of_Europe_with_steps_on_various_countries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805786852}
   - component: {fileID: 1805786853}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Checkpoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 1884661255}
   - component: {fileID: 1884661257}
   - component: {fileID: 1884661256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 1900993118}
   - component: {fileID: 1900993120}
   - component: {fileID: 1900993119}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
