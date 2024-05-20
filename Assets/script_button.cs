@@ -61,9 +61,9 @@ public class ClickCounter : MonoBehaviour
     void OnUpgradeButtonClick()
     {
         upgradeLevel++;
-        clicksPerIncrement += 1000;
+        clicksPerIncrement += 10;
         clickCount -= upgradeThreshold;
-        upgradeThreshold += 100;
+        upgradeThreshold += 200;
         upgradeButton.gameObject.SetActive(false);
         Debug.Log("Upgraded to level " + upgradeLevel + "! Clicks per increment: " + clicksPerIncrement);
         UpdateCounterText();
