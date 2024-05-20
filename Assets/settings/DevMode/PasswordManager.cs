@@ -6,6 +6,7 @@ public class PasswordManager : MonoBehaviour
     public GameObject passwordPanel;
     public InputField passwordInput;
     public GameObject settingsOverlay;
+    public GameObject DevModeOL;
     public GameObject settingsPanel;
     private string correctPassword = "31415";
 
@@ -39,6 +40,7 @@ public class PasswordManager : MonoBehaviour
         if (passwordInput.text == correctPassword) {
             passwordPanel.SetActive(false);
             settingsPanel.SetActive(true);
+            settingsOverlay.SetActive(true);
         }
         passwordInput.text = null;
     }
