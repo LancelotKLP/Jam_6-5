@@ -14,12 +14,11 @@ public class PasswordManager : MonoBehaviour
     {
         passwordPanel.SetActive(false);
         settingsPanel.SetActive(false);
-        settingsOverlay.SetActive(false);
+        settingsOverlay.SetActive(true);
     }
 
     public void ShowSettings()
     {
-        settingsOverlay.SetActive(true);
         settingsPanel.SetActive(true);
     }
 
