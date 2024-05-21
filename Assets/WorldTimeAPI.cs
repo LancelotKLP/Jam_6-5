@@ -37,24 +37,19 @@ public class WorldTimeAPI : MonoBehaviour
 
     IEnumerator GetRealDateTimeForAPI () {
         UnityWebRequest webRequest = UnityWebRequest.Get (API_URL);
-        Debug.Log("getting real datetime...");
         yield return webRequest.SendWebRequest();
         if (webRequest.error != null)
             Debug.Log ("Error:" + webRequest.error);
         else {
             TimeData timeData = JsonUtility.FromJson<TimeData> ( webRequest.downloadHandler.text );
-
             _currentDateTime = ParseDateTime ( timeData.datetime );
             isTimeLoaded = true;
-
-            Debug.Log("Success.");
         }
     }
 
     DateTime ParseDateTime(string datetime) {
         string date = Regex.Match(datetime, @"^\d{4}-\d{2}-\d{2}").Value;
         string time = Regex.Match(datetime, @"\d{2}:\d{2}:\d{2}").Value;
-
         return DateTime.Parse (string.Format ("{0} {1}", date, time));
     }
 

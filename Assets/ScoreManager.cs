@@ -13,20 +13,15 @@ public class ScoreManager : MonoBehaviour
     {
         string savePath = Application.dataPath + "/../save.db";
         if (File.Exists(savePath))
-        {
             LoadScore(savePath);
-        }
         else
-        {
             Debug.LogError("Save file not found at: " + savePath);
-        }
     }
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= updateInterval)
-        {
+        if (timer >= updateInterval) {
             timer = 0f;
             UpdateScore();
         }
@@ -34,29 +29,20 @@ public class ScoreManager : MonoBehaviour
 
     void LoadScore(string filePath)
     {
-        try
-        {
+        try {
             string[] lines = File.ReadAllLines(filePath);
 
-            if (lines.Length >= 2)
-            {
+            if (lines.Length >= 2) {
                 string[] scoreLine = lines[1].Split(':');
                 if (scoreLine.Length >= 2 && int.TryParse(scoreLine[1], out int score))
-                {
                     AddPoints(score);
-                }
                 else
-                {
                     Debug.LogError("Invalid score format in save file.");
-                }
             }
             else
-            {
                 Debug.LogError("Save file does not contain enough lines.");
-            }
         }
-        catch (System.Exception e)
-        {
+        catch (System.Exception e) {
             Debug.LogError("Error reading save file: " + e.Message);
         }
     }
@@ -65,13 +51,9 @@ public class ScoreManager : MonoBehaviour
     {
         string savePath = Application.dataPath + "/../save.db";
         if (File.Exists(savePath))
-        {
             LoadScore(savePath);
-        }
         else
-        {
             Debug.LogError("Save file not found at: " + savePath);
-        }
     }
 
     public void AddPoints(int points)

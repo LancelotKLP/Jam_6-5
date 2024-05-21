@@ -19,8 +19,7 @@ public class CheckTime : MonoBehaviour
     private void displayLostStreak()
     {
         if (lostStreak == 0) {
-            if (File.Exists(save))
-            {
+            if (File.Exists(save)) {
                 string[] lines = File.ReadAllLines(save);
                 lines[2] = "streak:0";
                 File.WriteAllLines(save, lines);
@@ -34,10 +33,8 @@ public class CheckTime : MonoBehaviour
 
     private void checkWinStreak()
     {
-        if (winStreak == 0)
-        {
-            if(File.Exists(save))
-            {
+        if (winStreak == 0) {
+            if(File.Exists(save)) {
                 string[] lines = File.ReadAllLines(save);
                 string[] streak_line = lines[2].Split(':');
                 int streak = int.Parse(streak_line[1]) + 1;
@@ -59,21 +56,12 @@ public class CheckTime : MonoBehaviour
 
         DateTime currentDateTime = WorldTimeAPI.Instance.GetCurrentDateTime();
         current_connexion_value = currentDateTime.ToString("dd/MM/yyyy");
-
-        // Trim any whitespace from the date strings
         last_connexion_value = last_connexion_value.Trim();
         current_connexion_value = current_connexion_value.Trim();
-
-        // Debug.Log("last_connexion_value after trim: " + last_connexion_value);
-        // Debug.Log("current_connexion_value after trim: " + current_connexion_value);
-
         DateTime lastConnectionDate = DateTime.ParseExact(last_connexion_value, "dd/MM/yyyy", null);
         DateTime currentConnectionDate = DateTime.ParseExact(current_connexion_value, "dd/MM/yyyy", null);
-
         TimeSpan difference = currentConnectionDate - lastConnectionDate;
-
         int daysPassed = (int)difference.TotalDays;
-
         if (daysPassed > 1) {
             Debug.Log("You have lost your streak: " + daysPassed + " days have passed since last connection.");
             displayLostStreak();
@@ -88,33 +76,24 @@ public class CheckTime : MonoBehaviour
     {
         counter = 0;
         save = Application.dataPath + "/../save.db";
-
-        if (File.Exists(save))
-        {
+        if (File.Exists(save)) {
             Debug.Log("File found : " + save);
-
             string[] content = File.ReadAllText(save).Split('\n');
             string[] last_connexion = content[0].Split(':');
             string[] score = content[1].Split(':');
-
             score_value = score[1];
             last_connexion_value = last_connexion[1];
-
             Debug.Log("last connexion : " + last_connexion_value);
-
             getApi();
         }
         else
-        {
             Debug.Log("File not found: " + save);
-        }
     }
 
     void Update()
     {
         timeSinceLastAction += Time.deltaTime;
-        if (timeSinceLastAction >= interval)
-        {
+        if (timeSinceLastAction >= interval) {
             if (File.Exists(save)) {
                 getApi();
                 string[] lines = File.ReadAllLines(save);
@@ -122,9 +101,8 @@ public class CheckTime : MonoBehaviour
                 last_connexion_value = current_connexion_value;
                 File.WriteAllLines(save, lines);
                 Debug.Log("Action executed at: " + Time.time);
-            } else {
+            } else
                 Debug.Log("je rentre pas dans le if >:(" + counter);
-            }
             timeSinceLastAction = 0f;
         }
     }

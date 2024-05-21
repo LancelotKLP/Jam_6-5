@@ -16,8 +16,7 @@ public class ClickCounter : MonoBehaviour
 
     void Start()
     {
-        if (File.Exists(save))
-        {
+        if (File.Exists(save)) {
             string[] lines = File.ReadAllLines(save);
             string[] scoreLine = lines[1].Split(':');
             string[] streakLine = lines[2].Split(':');
@@ -79,8 +78,7 @@ public class ClickCounter : MonoBehaviour
         Debug.Log("Saved score: " + clickCount);
         string save = Application.dataPath + "/../save.db";
 
-        if (File.Exists(save))
-        {
+        if (File.Exists(save)) {
             string[] lines = File.ReadAllLines(save);
             lines[1] = "score:" + clickCount;
             File.WriteAllLines(save, lines);

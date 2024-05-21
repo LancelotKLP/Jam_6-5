@@ -12,8 +12,7 @@ public class InfiniteScroll : MonoBehaviour
     {
         maps = new Transform[transform.childCount];
         mapRenderers = new SpriteRenderer[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
+        for (int i = 0; i < transform.childCount; i++) {
             maps[i] = transform.GetChild(i);
             mapRenderers[i] = maps[i].GetComponent<SpriteRenderer>();
         }
@@ -23,11 +22,9 @@ public class InfiniteScroll : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < maps.Length; i++)
-        {
+        for (int i = 0; i < maps.Length; i++) {
             maps[i].Translate(Vector3.left * scrollSpeed * Time.deltaTime);
-            if (maps[i].position.x <= -mapWidth)
-            {
+            if (maps[i].position.x <= -mapWidth) {
                 int correspondingIndex = (i % 2 == 0) ? i + 1 : i - 1;
                 maps[i].position = new Vector3(maps[correspondingIndex].position.x + mapWidth, maps[i].position.y, maps[i].position.z);
                 Debug.Log("Repositioned map " + i + " to: " + maps[i].position); // Debug log
@@ -37,8 +34,7 @@ public class InfiniteScroll : MonoBehaviour
 
     private void UpdateMapWidth()
     {
-        if (mapRenderers[0] != null)
-        {
+        if (mapRenderers[0] != null) {
             mapWidth = mapRenderers[0].bounds.size.x;
             Debug.Log("Map Width: " + mapWidth); // Debug log
         }
@@ -48,10 +44,8 @@ public class InfiniteScroll : MonoBehaviour
 
     private void PositionMaps()
     {
-        for (int i = 0; i < maps.Length; i += 2)
-        {
-            if (i < maps.Length)
-            {
+        for (int i = 0; i < maps.Length; i += 2) {
+            if (i < maps.Length) {
                 maps[i].position = new Vector3(0, maps[i].position.y, maps[i].position.z);
                 Debug.Log("Positioning map " + i + " at: " + maps[i].position);
             }
